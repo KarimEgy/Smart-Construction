@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+   
     </head>
     <body>
         <section class="welcome">
@@ -12,14 +14,22 @@
                 <div class="logo">
                     <img src="images/Smart Construction_logo2.jpg">
                 </div>
-                <div class="nav-links">
+
+                <div class="nav-links" id="navLinks">
+                    
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    
                     <ul>
                         <!-- <li><a href="">Home</a></li> -->
                         <li><a href="">Who Are We!</a></li>
                         <li><a href="#Projects">Projects</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
+
                 </div>
+
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+
         </section>
             <div class="content">
                 
@@ -89,6 +99,24 @@
             window.scrollTo(0, 0);
         }; 
         </script> -->
+
+        <!-- Script to toggle menu in mobile view -->
+
+        <script>
+
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right="-180px";
+            }
+
+
+        </script>
+
            
     </body>
 </html>
